@@ -5,15 +5,15 @@ def exibir_menu():
     print("3 - Sair") 
     print("-----------------------------------") 
 
-def cadastrar_pessoa (cadastros):    
-    nome = input("Nome:")
+def cadastrar_pessoa(cadastros):    
+    nome = input ("Nome:")
     idade = input ("Idade:")
     turma = input ("Turma:")
     curso = input ("Curso:")
     cadastros.append({ "Nome": nome, "Idade": idade, "Turma": turma, "Curso": curso})
     print("Cadastro realizado com sucesso!")
 
-def ver_cadastros (cadastros):
+def ver_cadastros(cadastros):
     if not cadastros:
         print ("Nenhum cadastro no sistema")
     else:
@@ -25,12 +25,12 @@ def ver_cadastros (cadastros):
 def main():
     cadastros = []
     while True:
-        exibir_menu ()
+        exibir_menu()
         opção = input("escolha uma opcção:")
         if opção == "1": 
-            cadastrar_pessoa (cadastros)
+            cadastrar_pessoa(cadastros)
         elif opção == "2":
-            ver_cadastros (cadastros)    
+            ver_cadastros(cadastros)    
         elif opção == "3":
             print ("Obrigado por utilizar o sistema")
             break
@@ -38,5 +38,5 @@ def main():
         else:
             print("Opção inexistente, tente novamente")    
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()            
